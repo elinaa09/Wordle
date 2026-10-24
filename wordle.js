@@ -17,7 +17,7 @@ console.log(word);
 
 window.onload = function(){
     intialize();
-}
+};
 
 function intialize() {
     for (let r = 0; r < height; r++) {
@@ -42,7 +42,7 @@ let keyboard = [
         let keyboardRow = document.createElement("div");
         keyboardRow.classList.add("keyboard-row");
 
-     for (let j = 0; j < keyboard.length; j++)  {
+     for (let j = 0; j < currRow.length; j++)  {
         let keyTile = document.createElement("div");
 
         let key = currRow[j];
@@ -56,7 +56,7 @@ let keyboard = [
             else if ("A" <= key && key <= "Z") {
                 keyTile.id = "Key" + key; // "Key" + "
             }
-            keyTile.addEventListner("click", processKey);
+            keyTile.addEventListener("click", processKey);
 
             if (key == "Enter") {
                 keyTile.classList.add("enter-key-tile");
@@ -68,9 +68,10 @@ let keyboard = [
         document.body.appendChild(keyboardRow);
     }
 
-    document.addEventlistener("keyup", (e) => {
+    document.addEventListener("keyup", (e) => {
         processInput(e);
-    })
+    });
+}
 
 function processKey() {
     e = { "code" : this.id };
@@ -96,16 +97,17 @@ function processInput(e) {
         let currTile = document.getElementById(row.toString() + '-' + col.toString());
         currTile.innerText = "";
     }
-}
+
 
      if (e.code == "Enter") {
         update();
     }
+
     if  (!gameOver && row == height) {
     gameOver = true;
         document.getElementById("answer").innerText = word;
-         }
         }
+}
 
         function update() {
             let guess = "";
