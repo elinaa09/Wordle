@@ -23,7 +23,7 @@ let keyboard = [
             else if ("A" <= key && key <= "Z") {
                 keyTile.id = "Key" + key; // "Key" + "
             }
-            keyTile.addEventListener("click", processKey);
+            keyTile.addEventListner("click", processKey);
 
             if (key == "Enter") {
                 keyTile.classList.add("enter-key-tile");
@@ -46,7 +46,7 @@ function processKey() {
 function processInput(e) {
     if (gameOver) return; 
 
-    // alert(e.code);
+    
     if ("KeyA" <= e.code && e.code <= "KeyZ") {
         if (col < width) {
         let currTile = document.getElementById(row.toString() + '-' + col.toString());     
@@ -62,6 +62,19 @@ function processInput(e) {
         }
         let currTile = document.getElementById(row.toString() + '-' + col.toString());
         currTile.innerText = "";
+    }
+}
+
+else if (e.code == "Enter") {
+        update();
+ }
+ if  (!gameOver && row == height) {
+    gameOver = true;
+        document.getElementById("answer").innerText = word;
+         }
+
+
+
 
 
             
