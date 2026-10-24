@@ -1,0 +1,44 @@
+body{
+
+}
+
+.front {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 24px;
+  text-align: center;
+}
+
+.logo {
+  width: min(320px, 70vw);
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.title{
+  display: flex;
+  gap: 8px;
+}
+
+.start-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.15s ease;
+}
+
+.start-btn img {
+
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+
+
+
