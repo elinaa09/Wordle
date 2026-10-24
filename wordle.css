@@ -9,3 +9,10 @@ body {
     letter-spacing: 2px;
 }
 
+#board {
+   display: grid;
+   grid-template-columns: repeat(5, 60px);
+   gap: 6px;
+   justify-content: center;
+   margin: 20px 0;
+}
