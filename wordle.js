@@ -184,21 +184,9 @@ function processInput(e) {
             keyTile.classList.add("absent")
         }
     }
-}
+
 
     row += 1; //start new row
     col = 0; //start at 0 for new row
-}
-
-
-
-
-
-
-
-
-            
-
-
-
+}}
 
