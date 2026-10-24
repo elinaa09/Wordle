@@ -32,9 +32,9 @@ function intialize() {
     }
 
 let keyboard = [
-    ["Q","W", "E", "R", "T", "Y", "U", "I", "O", "P"]
-    ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
-    ["Enter", "Z", "X", "C", "V", "B", "N", "M", "⌫" ]
+    ["Q","W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+    ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+    ["Enter", "Z", "X", "C", "V", "B", "N", "M", "⌫" ],
     ]
 
       for (let i = 0; i < keyboard.length; i++) {
@@ -42,7 +42,7 @@ let keyboard = [
         let keyboardRow = document.createElement("div");
         keyboardRow.classList.add("keyboard-row");
 
-     for (let i = 0; i < keyboard.length; j++)  {
+     for (let j = 0; j < keyboard.length; j++)  {
         let keyTile = document.createElement("div");
 
         let key = currRow[j];
@@ -68,7 +68,7 @@ let keyboard = [
         document.body.appendChild(keyboardRow);
     }
 
-    document.addEventListener("keyup", (e) => {
+    document.addEventlistener("keyup", (e) => {
         processInput(e);
     })
 
@@ -164,8 +164,32 @@ function processInput(e) {
     for (let c = 0; c < width; c++) {
         let currTile = document.getElementById(row.toString() + '-' + c.toString());
         let letter = currTile.innerText;
+    
+        if (!currTile.classList.contains("correct")) {
+
+        if (word.includes(letter) && letterCount[letter] > 0) {
+           currTile.classList.add("present");
+        let keyTile = document.getElementById("Key" + letter);
+        if (!keyTile.classList.contains("correct") ) {
+        keyTile.classList.add("present");    
+         } 
+
+          letterCount[letter] -= 1;
+        }
+        else{
+            currTile.classList.add("absent");
+            let keyTile = document.getElementById("Key" + letter);
+            keyTile.classList.add("absent")
+        }
     }
-};
+}
+
+    row += 1; //start new row
+    col = 0; //start at 0 for new row
+}
+
+
+
 
 
 
