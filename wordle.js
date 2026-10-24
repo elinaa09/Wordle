@@ -49,10 +49,16 @@ let keyboard = [
             keyTile.innerText = key;
             if (key == "Enter") {
                 keyTile.id = "Enter";
+                keyTile.classList.add("enter-key-tile");
+                keyTile.innerHTML = '<img src="enter.png" alt="Enter">'; 
             }
+
             else if (key == "⌫") {
                 keyTile.id = "Backspace";
+                keyTile.classList.add("key-tile");
+                keyTile.innerHTML = '<img src="back.png" alt="Back">';
             }
+
             else if ("A" <= key && key <= "Z") {
                 keyTile.id = "Key" + key; // "Key" + "
             }
@@ -61,6 +67,7 @@ let keyboard = [
             if (key == "Enter") {
                 keyTile.classList.add("enter-key-tile");
             } else {
+                keyTile.id = "Key" + key;  
                 keyTile.classList.add("key-tile");
             }
             keyboardRow.appendChild(keyTile);

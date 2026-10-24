@@ -87,5 +87,40 @@ body {
 }
 
 
+.backbtn{
+    height:20px ;
+    background: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.15s ease;
+}
+
+.exitbtn{
+    height:20px ;
+    background: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.15s ease;
+}
+
+
+
+.back-btn img {
+
+  display: block;
+  width: 50px;
+  height: auto;
+}
+
+.exit-btn img {
+
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+
+
+
 
 
