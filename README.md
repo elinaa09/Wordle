@@ -11,8 +11,10 @@ A Wordle clone built from scratch with plain HTML, CSS and JavaScript. Guess the
 
 
 #Colour	Meaning
-🟩 Green	The letter is in the word and in the right spot
-🟨 Yellow	The letter is in the word but in the wrong spot
+🟩 Green	  The letter is in the word and in the right spot
+
+🟨 Yellow	  The letter is in the word but in the wrong spot
+
 🟥 Red	    The letter is not in the word
 
 "Not in word list" means your guess isn't a valid word in the game's dictionary. Delete a few letters and try another word.
