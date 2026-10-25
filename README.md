@@ -3,6 +3,11 @@
 A Wordle clone built from scratch with plain HTML, CSS and JavaScript. Guess the hidden 5-letter word in 6
 
 
+<img width="434" height="688" alt="wordle3" src="https://github.com/user-attachments/assets/9b749821-9ca5-42ce-85ad-69769a6362ab" />
+
+
+<img width="484" height="738" alt="wordledone" src="https://github.com/user-attachments/assets/f8a29df4-019f-479f-9d95-ec3c05549714" />
+
 
 #Colour	Meaning
 🟩 Green	The letter is in the word and in the right spot
