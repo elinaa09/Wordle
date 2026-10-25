@@ -11,7 +11,7 @@
 }
 
 .logo {
-  width: min(320px, 70vw);
+  width: 500px;
   height: auto;
   mix-blend-mode: multiply;
 }
@@ -32,8 +32,12 @@
 .start-btn img {
 
   display: block;
-  width: 150px;
+  width: 170px;
   height: auto;
+}
+
+.background{
+  color: #e4be66;
 }
 
 
