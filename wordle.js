@@ -3,7 +3,7 @@ var height = 6; //num of guess
 var width = 5; //word length
 
 var row = 0; //attempts
-var col = 0; //current letter for that attempt
+var col = 0; //c attempt
 
 var gameOver = false;
 
@@ -18,6 +18,7 @@ console.log(word);
 window.onload = function(){
     intialize();
 };
+
 
 function intialize() {
     for (let r = 0; r < height; r++) {
@@ -47,6 +48,7 @@ let keyboard = [
 
         let key = currRow[j];
             keyTile.innerText = key;
+            
             if (key == "Enter") {
                 keyTile.id = "Enter";
                 keyTile.classList.add("enter-key-tile");
@@ -59,10 +61,6 @@ let keyboard = [
                 keyTile.innerHTML = '<img src="back.png" alt="Back">';
             }
 
-            else if ("A" <= key && key <= "Z") {
-                keyTile.id = "Key" + key; // "Key" + "
-            }
-            keyTile.addEventListener("click", processKey);
 
             if (key == "Enter") {
                 keyTile.classList.add("enter-key-tile");
@@ -70,6 +68,7 @@ let keyboard = [
                 keyTile.id = "Key" + key;  
                 keyTile.classList.add("key-tile");
             }
+            keyTile.addEventListener("click", processKey);
             keyboardRow.appendChild(keyTile);
         }
         document.body.appendChild(keyboardRow);
@@ -117,6 +116,7 @@ function processInput(e) {
 }
 
         function update() {
+            let message = document.getElementById("answer");
             let guess = "";
     document.getElementById("answer").innerText = "";
 
@@ -191,9 +191,16 @@ function processInput(e) {
             keyTile.classList.add("absent")
         }
     }
-
+}
+if (correct == width) {
+        gameOver = true;
+        message.innerText = "You got it!";
+         return;
+    }
 
     row += 1; //start new row
     col = 0; //start at 0 for new row
+    if (row == height) {
+        gameOver = true;
+        message.innerText = "The word was " + word;
 }}
-
