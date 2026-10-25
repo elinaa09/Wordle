@@ -3,7 +3,8 @@
 A Wordle clone built from scratch with plain HTML, CSS and JavaScript. Guess the hidden 5-letter word in 6
 
 
-<img width="434" height="688" alt="wordle3" src="https://github.com/user-attachments/assets/9b749821-9ca5-42ce-85ad-69769a6362ab" />
+<img width="510" height="685" alt="wordleempty" src="https://github.com/user-attachments/assets/ff64309e-e511-435b-acac-9084be713bb6" />
+
 
 
 <img width="484" height="738" alt="wordledone" src="https://github.com/user-attachments/assets/f8a29df4-019f-479f-9d95-ec3c05549714" />
